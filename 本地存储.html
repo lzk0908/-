@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="clear">删除所有数据</button>
+
+    <!-- 获取元素 -->
+    <script>
+      let ipt = document.querySelector("input");
+      let setBtn = document.querySelector(".set");
+      let getBtn = document.querySelector(".get");
+      let removeBtn = document.querySelector(".remove");
+      let clearBtn = document.querySelector(".clear");
+
+      //sessionStorage的操作
+
+      //   能够存储5M
+      //生命周期为关闭浏览器窗口(页面刷新,数据还在)
+      //以键值对的形式存储使用
+      //在同源的不同页面之间是可以共享的
+
+      //存储数据
+      //   setBtn.onclick = function () {
+      //     sessionStorage.setItem("name", ipt.value);
+      //     sessionStorage.setItem("age", ipt.value);
+      //   };
+
+      //   //获取数据
+      //   getBtn.onclick = function () {
+      //      console.log( sessionStorage.getItem("name"))
+      //   };
+      //   //删除数据
+      //   removeBtn.onclick = function () {
+      //       sessionStorage.removeItem("name")
+      //   };
+
+      //   //删除所有数据
+      //   clearBtn.onclick = function () {
+      //       sessionStorage.clear();
+      //   };
+
+      //localStorage的操作
+
+      //   能够存储20M
+      //生命周期为永久,需要手动删除
+      //以键值对的形式存储使用
+      //在同源的不同页面之间是可以共享的
+
+      //存储数据
+      setBtn.onclick = function () {
+        localStorage.setItem("name", ipt.value);
+        localStorage.setItem("age", ipt.value);
+      };
+
+      //获取数据
+      getBtn.onclick = function () {
+        console.log(localStorage.getItem("name"));
+      };
+      //删除数据
+      removeBtn.onclick = function () {
+        localStorage.removeItem("name");
+      };
+
+      //删除所有数据
+      clearBtn.onclick = function () {
+        localStorage.clear();
+      };
+    </script>
+  </body>
+</html>
