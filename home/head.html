@@ -19,8 +19,7 @@
           <li class="layui-nav-item">
             <a href="javascript:;" class="userInfo">
               <img src="/assets/images/touxiang.jpg" class="layui-nav-img" />
-              <span class="textAvatar"></span>
-              个人中心
+              <span class="textAvatar"></span>个人中心
             </a>
             <dl class="layui-nav-child">
               <dd><a href="javascript:;">基本资料</a></dd>
@@ -87,17 +86,17 @@
               >
               <dl class="layui-nav-child">
                 <dd>
-                  <a href="javascript:;">
+                  <a href="/user/user_info.html" target="layuiBody">
                     <i class="layui-icon layui-icon-app"></i> 基本资料</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/user/user_avatar.html" target="layuiBody"
                     ><i class="layui-icon layui-icon-app"></i> 更换头像</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/user/user_pwd.html" target="layuiBody"
                     ><i class="layui-icon layui-icon-app"></i> 重置密码</a
                   >
                 </dd>
@@ -109,9 +108,16 @@
 
       <div class="layui-body">
         <!-- 内容主体区域 -->
-        <iframe
+        <!-- <iframe
           name="layuiBody"
           src="/home/dashboard.html"
+          frameborder="0"
+          width="100%"
+          height="100%"
+        ></iframe> -->
+        <iframe
+          name="layuiBody"
+          src="/user/user_avatar.html"
           frameborder="0"
           width="100%"
           height="100%"
